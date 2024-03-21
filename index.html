@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="style.css">
+    <title>Inteligencia Artificial</title>
+</head>
+<body>
+<center>
+    <h1>Inteligencia Artificial</h1>
+    <hr>
+    <h3>Función take_selfie</h3>
+    <textarea cols='80' rows='4' id="codigo">
+        function take_selfie()
+{
+    Webcam.snap(function(data_uri) {
+        document.getElementById("result").innerHTML = '<img id="selfie_image" src="'+data_uri+'"/>';
+    });
+}
+
+       
+
+    </textarea><br>
+    <button type="button" id="copyClip" data-clipboard-target="#codigo">Copiar</button>
+    <script src="clipboard.min.js"></script>
+
+    <br><br>
+    <hr>
+    <h3>Función save</h3>
+    <textarea cols='80' rows='4' id="codigo2">
+        function save()
+        {
+          link = document.getElementById("link");
+          image = document.getElementById("selfie_image").src ;
+          link.href = image;
+          link.click();
+        }
+    </textarea><br>
+    <button type="button" id="bt2" class="bt2" data-clipboard-target="#codigo3">Copiar</button>
+    <script>
+    var clipboard2 = new Clipboard('.bt2');
+    </script>
+    
+
+</center>
+    
+</body>
+</html>
